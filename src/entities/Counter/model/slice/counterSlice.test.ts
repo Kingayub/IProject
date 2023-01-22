@@ -1,7 +1,5 @@
-import { DeepPartial } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
 import { CounterSchema } from '../types/CounterSchema';
-import { counterReducer, counterActions } from './CounterSlice';
+import { counterReducer, counterActions } from './counterSlice';
 
 describe('counterSlice.test', () => {
     test('decrement', () => {
