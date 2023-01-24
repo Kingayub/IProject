@@ -7,7 +7,7 @@ describe('loginSlice.test', () => {
         const state: DeepPartial<LoginSchema> = { username: '123' };
         expect(loginReducer(
             state as LoginSchema,
-            loginActions.setUsername('123123'),
+            loginActions.setUserName('123123'),
         )).toEqual({ username: '123123' });
     });
 
