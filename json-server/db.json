@@ -1,24 +1,38 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "json-server", "author": "typicode" },
-    { "id": 3, "title": "json-server", "author": "typicode" },
-    { "id": 4, "title": "json-server", "author": "typicode" },
-    { "id": 5, "title": "json-server", "author": "typicode" },
-    { "id": 6, "title": "json-server", "author": "typicode" },
-    { "id": 7, "title": "json-server", "author": "typicode" },
-    { "id": 8, "title": "json-server", "author": "typicode" },
-    { "id": 9, "title": "json-server", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": "2"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Аюб",
+    "lastname": "Чечиев",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://kartinkin.net/uploads/posts/2022-03/1646873441_75-kartinkin-net-p-inkognito-kartinki-81.jpg"
+  }
 }
