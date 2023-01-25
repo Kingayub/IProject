@@ -20,11 +20,3 @@ Primary.args = {
     placeholder: 'Type text',
     value: '123123',
 };
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-    placeholder: 'Type text',
-    value: '123123',
-    theme: Theme.DARK,
-};
-Secondary.decorators = [themeDecorator(Theme.DARK)];
