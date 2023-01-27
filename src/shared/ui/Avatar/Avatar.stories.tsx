@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar } from './Avatar';
-import AvatarImg from './incognito.jpg';
+import AvatarImg from '../../assets/tests/incognito.jpg';
 
 export default {
     title: 'shared/Avatar',
