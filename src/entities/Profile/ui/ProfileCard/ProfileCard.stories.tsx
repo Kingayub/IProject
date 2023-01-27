@@ -20,8 +20,8 @@ Primary.args = {
     data: {
         username: 'admin',
         age: 22,
-        country: Country.Ukraine,
-        lastname: 'ulbi tv',
+        country: Country.Russia,
+        lastname: 'Chechiev',
         first: 'asd',
         city: 'asf',
         currency: Currency.USD,
