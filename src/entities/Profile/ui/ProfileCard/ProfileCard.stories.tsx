@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ProfileCard } from 'entities/Profile';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import avatar from 'shared/assets/tests/incognito.jpg';
-import { ProfileCard } from './ProfileCard';
 
 export default {
     title: 'entities/ProfileCard',
@@ -18,13 +18,13 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 export const Primary = Template.bind({});
 Primary.args = {
     data: {
-        first: 'ads',
-        lastname: 'asdsad',
-        username: 'asdsadsadas',
-        city: 'Grozny',
-        country: Country.Russia,
-        currency: Currency.RUB,
-        age: 29,
+        username: 'admin',
+        age: 22,
+        country: Country.Ukraine,
+        lastname: 'ulbi tv',
+        first: 'asd',
+        city: 'asf',
+        currency: Currency.USD,
         avatar,
     },
 };
