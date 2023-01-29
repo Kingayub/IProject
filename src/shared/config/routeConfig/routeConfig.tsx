@@ -5,7 +5,7 @@ import React from 'react';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { ArticlesPage } from 'pages/ArticlesPage';
-import {ArticleDetailsPage} from "pages/ArticleDetailsPage";
+import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
 
 export type AppRouteProps = RouteProps & {
     authOnly?: boolean;

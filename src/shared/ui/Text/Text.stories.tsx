@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { themeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 export default {
     title: 'shared/Text',
@@ -56,3 +56,17 @@ OnlyTextDark.args = {
     text: 'Ca ha cunam ax xy box, Ca ha cunam ax xy box, Ca ha cunam ax xy box',
 };
 OnlyTextDark.decorators = [themeDecorator(Theme.DARK)];
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title maitl faitl',
+    text: 'Ca ha cunam ax xy box, Ca ha cunam ax xy box, Ca ha cunam ax xy box',
+    size: TextSize.L,
+};
+
+export const SizeM = Template.bind({});
+SizeM.args = {
+    title: 'Title maitl faitl',
+    text: 'Ca ha cunam ax xy box, Ca ha cunam ax xy box, Ca ha cunam ax xy box',
+    size: TextSize.M,
+};
