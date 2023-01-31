@@ -8,7 +8,7 @@ import { fetchArticleById } from 'entities/Article/model/services/fetchArticleBy
 import { Article } from 'entities/Article';
 import {
     fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/getchCommentsByArticleId/fetchCommentsByArticleId';
+} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { ArticleDetailsCommentSchema } from '../types/ArticleDetailsCommentSchema';
 
 const commentsAdapter = createEntityAdapter<Comment>({

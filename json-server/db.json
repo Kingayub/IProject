@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,12 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hello world",
+      "id": "g4WwXex"
     }
   ],
   "users": [
@@ -118,14 +126,28 @@
       "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/3517023/pub_603580012dc5795636076dd1_603582442dc579563608f109/scale_1200"
     }
   ],
-  "profile": {
-    "first": "Аюб",
-    "lastname": "Чечиев",
-    "age": 29,
-    "currency": "EUR",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://kartinkin.net/uploads/posts/2022-03/1646873441_75-kartinkin-net-p-inkognito-kartinki-81.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Аюб",
+      "lastname": "Чечиев",
+      "age": 29,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "Ayub",
+      "avatar": "https://kartinkin.net/uploads/posts/2022-03/1646873441_75-kartinkin-net-p-inkognito-kartinki-81.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Дени",
+      "lastname": "Мамакаев",
+      "age": 29,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Deni",
+      "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/3517023/pub_603580012dc5795636076dd1_603582442dc579563608f109/scale_1200"
+    }
+  ]
 }
