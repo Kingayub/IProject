@@ -34,6 +34,7 @@ export const CommentList = (props: CommentListProps) => {
             {comments?.length
                 ? comments.map((comment) => (
                     <CommentCard
+                        key={comment.id}
                         className={cls.comment}
                         comment={comment}
                         isLoading={isLoading}

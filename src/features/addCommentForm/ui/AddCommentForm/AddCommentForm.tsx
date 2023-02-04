@@ -24,7 +24,8 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
     const dispatch = useAppDispatch();
-    const onCommentTextChange = useCallback((value:string) => {
+
+    const onCommentTextChange = useCallback((value: string) => {
         dispatch(addCommentFormActions.setText(value));
     }, [dispatch]);
 
@@ -32,6 +33,7 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
         onSendComment(text || '');
         onCommentTextChange('');
     }, [onCommentTextChange, onSendComment, text]);
+
     return (
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames(cls.AddCommentForm, {}, [className])}>
@@ -52,4 +54,4 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
     );
 };
 
-export default memo(AddCommentForm);
+export default AddCommentForm;

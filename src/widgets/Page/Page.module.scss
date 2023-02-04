@@ -1,0 +1,12 @@
+.Page {
+    height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 20px 20px 20px 45px;
+    flex-shrink: 100;
+}
+
+.trigger {
+    height: 20px;
+    margin: 10px;
+}

@@ -85,7 +85,7 @@ const article = {
 } as Article;
 
 export default {
-    title: 'shared/ArticleList',
+    title: 'entities/Article/ArticleList',
     component: ArticleList,
     argTypes: {
         backgroundColor: { control: 'color' },
