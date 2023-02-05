@@ -8,9 +8,19 @@
 }
 
 .links {
-    margin-left: auto;
+    //margin-left: auto;
 }
 
 .mainLink {
     margin-right: 15px;
 }
+
+.appName {
+    width: var(--sidebar-width);
+    margin-left: 16px;
+}
+
+.createBtn {
+    margin: 0 auto;
+}
+
