@@ -206,7 +206,7 @@
     },
     {
       "id": "7",
-        "title": "Ruby news",
+      "title": "Ruby news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://i.pinimg.com/originals/bc/3f/04/bc3f04efca03c6b2661c9e9500b9a549.png",
       "views": 100,
@@ -559,6 +559,12 @@
       "userId": "1",
       "text": "asdsad",
       "id": "b3MK7py"
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "assssssssssssss",
+      "id": "KElZqEV"
     }
   ],
   "users": [
