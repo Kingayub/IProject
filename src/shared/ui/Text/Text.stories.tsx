@@ -70,3 +70,10 @@ SizeM.args = {
     text: 'Ca ha cunam ax xy box, Ca ha cunam ax xy box, Ca ha cunam ax xy box',
     size: TextSize.M,
 };
+
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Title maitl faitl',
+    text: 'Ca ha cunam ax xy box, Ca ha cunam ax xy box, Ca ha cunam ax xy box',
+    size: TextSize.S,
+};
