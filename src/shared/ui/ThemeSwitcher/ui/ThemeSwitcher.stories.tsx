@@ -1,9 +1,7 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { themeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { PrimaryDark } from 'shared/ui/AppLink/Applink.stories';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 export default {

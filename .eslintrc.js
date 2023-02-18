@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'king-ayub-plugin-new',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -46,7 +47,7 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target'],
+                ignoreAttribute: ['data-testid', 'to', 'target', 'align', 'direction', 'justify', 'gap'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
@@ -59,6 +60,7 @@ module.exports = {
         'react/jsx-no-useless-fragment': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+        'king-ayub-plugin-new/relative-absolute-paths': 'error',
     },
     globals: {
         __IS_DEV__: true,

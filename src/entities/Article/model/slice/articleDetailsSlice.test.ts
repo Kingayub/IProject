@@ -1,6 +1,6 @@
-import { Article, ArticleDetailsSchema } from 'entities/Article';
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import { ArticleType } from 'entities/Article/model/types/article';
+import { ArticleDetailsSchema } from '../types/articleDetailsSchema';
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById';
+import { ArticleType, Article } from '../types/article';
 import {
     articleDetailsActions, articleDetailsReducer,
 } from './articleDetailsSlice';

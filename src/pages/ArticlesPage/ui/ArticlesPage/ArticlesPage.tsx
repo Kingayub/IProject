@@ -7,8 +7,8 @@ import { useInitialEffect } from 'shared/lib/hooks/useInnitialEffect/useInitialE
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'widgets/Page/Page';
-import { ArticlePageFilters } from 'pages/ArticlesPage/ui/ArticlePageFilters/ArticlePageFilters';
 import { useSearchParams } from 'react-router-dom';
+import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice';
