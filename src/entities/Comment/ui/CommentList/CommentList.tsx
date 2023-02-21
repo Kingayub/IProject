@@ -21,7 +21,7 @@ export const CommentList = (props: CommentListProps) => {
     const { t } = useTranslation();
     if (isLoading) {
         return (
-            <VStack gap="16" max className={classNames('', {}, [className])}>
+            <VStack max gap="16" className={classNames('', {}, [className])}>
                 <CommentCard isLoading />
                 <CommentCard isLoading />
                 <CommentCard isLoading />
