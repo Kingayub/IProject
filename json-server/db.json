@@ -596,15 +596,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/96506/pub_5d388e01b96cfd00adb0b5c0_5d388e3ef0d4f400ae39da3a/scale_1200"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/3517023/pub_603580012dc5795636076dd1_603582442dc579563608f109/scale_1200"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://catherineasquithgallery.com/uploads/posts/2021-02/1612257749_72-p-paren-na-fioletovom-fone-96.jpg"
     }
   ],
   "profile": [
