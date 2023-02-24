@@ -1,16 +1,14 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import {
-    HTMLAttributeAnchorTarget, memo, PropsWithChildren, ReactNode,
-} from 'react';
+import { HTMLAttributeAnchorTarget } from 'react';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Virtuoso } from 'react-virtuoso';
-import { Loader } from 'shared/ui/Loader/Loader';
 import { HStack } from 'shared/ui/Stack';
 import { ArticleListItem } from '../../ui/ArticleListItem/ArticleListItem';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListProps {
     className?: string;

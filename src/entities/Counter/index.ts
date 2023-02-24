@@ -5,5 +5,7 @@ import { CounterSchema } from './model/types/CounterSchema';
 export {
     counterReducer,
     Counter,
+};
+export type {
     CounterSchema,
 };
