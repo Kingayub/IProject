@@ -28,7 +28,7 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 
 interface ArticleDetailsProps {
     className?: string;
-    id:string;
+    id?:string;
 }
 
 const reducers:ReducersList = {
@@ -96,7 +96,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
             <Text
                 theme={TextTheme.ERROR}
                 align={TextAlign.CENTER}
-                title={t('Произошла ошибка при загрузке статьи')}
+                title={`${t('Произошла ошибка при загрузке статьи')}`}
             />
         );
     } else {

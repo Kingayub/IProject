@@ -4,7 +4,7 @@ import { Profile } from 'entities/Profile';
 
 export const fetchProfileData = createAsyncThunk<
     Profile,
-    string,
+    string | undefined,
     ThunkConfig<string>
 >(
     'profile/fetchProfileData',
@@ -17,7 +17,9 @@ export const fetchProfileData = createAsyncThunk<
             if (!response.data) {
                 throw new Error();
             }
-
+            if (!profileId) {
+                throw new Error('Профиль не найден');
+            }
             return response.data;
         } catch (e) {
             return rejectWithValue('error');

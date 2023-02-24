@@ -21,7 +21,7 @@ export const ArticleInfiniteList = ({ className }: ArticleInfiniteListProps) => 
     const view = useSelector(getArticlesPageView);
 
     if (error) {
-        return <Text text={t('Ошибка при загрузке статей')} />;
+        return <Text text={`${t('Ошибка при загрузке статей')}`} />;
     }
 
     return (
@@ -30,6 +30,7 @@ export const ArticleInfiniteList = ({ className }: ArticleInfiniteListProps) => 
             view={view}
             articles={articles}
             className={className}
+            virtualized
         />
     );
 };

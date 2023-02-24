@@ -48,7 +48,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (isLoading) {
         return (
-            <HStack justify="center" className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <HStack
+                justify="center"
+                className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}
+            >
                 <Loader />
             </HStack>
 
@@ -60,8 +63,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
             <HStack justify="center" className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
                 <Text
                     theme={TextTheme.ERROR}
-                    title={t('Произошла ошибка при загрузке профиля')}
-                    text={t('Попробуйте обновить страницу')}
+                    title={`${t('Произошла ошибка при загрузке профиля')}`}
+                    text={`${t('Попробуйте обновить страницу')}`}
                     align={TextAlign.CENTER}
                 />
             </HStack>
@@ -82,56 +85,50 @@ export const ProfileCard = (props: ProfileCardProps) => {
             )}
             <Input
                 value={data?.first}
-                placeholder={t('Ваше имя')}
+                placeholder={`${t('Ваше имя')}`}
                 className={cls.input}
                 onChange={onChangeFirstname}
                 readonly={readonly}
-                label={t('Ваше имя')}
                 data-testid="ProfileCard.firstname"
             />
             <Input
                 value={data?.lastname}
-                placeholder={t('Ваша фамилия')}
+                placeholder={`${t('Ваша фамилия')}`}
                 className={cls.input}
                 onChange={onChangeLastname}
                 readonly={readonly}
-                label={t('Ваша фамилия')}
                 data-testid="ProfileCard.lastname"
             />
             <Input
                 value={data?.age}
-                placeholder={t('Ваш возраст')}
+                placeholder={`${t('Ваш возраст')}`}
                 className={cls.input}
                 onChange={onChangeAge}
                 readonly={readonly}
-                label={t('Ваш возраст')}
                 data-testid="ProfileCard.age"
             />
             <Input
                 value={data?.city}
-                placeholder={t('Ваш город')}
+                placeholder={`${t('Ваш город')}`}
                 className={cls.input}
                 onChange={onChangeCity}
                 readonly={readonly}
-                label={t('Ваш город')}
                 data-testid="ProfileCard.country"
             />
             <Input
                 value={data?.username}
-                placeholder={t('Введите имя пользователя')}
+                placeholder={`${t('Введите имя пользователя')}`}
                 className={cls.input}
                 onChange={onChangeUsername}
                 readonly={readonly}
-                label={t('Введите имя пользователя')}
                 data-testid="ProfileCard.username"
             />
             <Input
                 value={data?.avatar}
-                placeholder={t('Введите ссылку на аватар')}
+                placeholder={`${t('Введите ссылку на аватар')}`}
                 className={cls.input}
                 onChange={onChangeAvatar}
                 readonly={readonly}
-                label={t('Введите ссылку на аватар')}
                 data-testid="ProfileCard.avatar"
             />
             <CurrencySelect

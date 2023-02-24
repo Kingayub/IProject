@@ -1,11 +1,14 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
+import {
+    HTMLAttributeAnchorTarget, memo, PropsWithChildren, ReactNode,
+} from 'react';
 import { Text, TextSize } from 'shared/ui/Text/Text';
-import { List, ListRowProps, WindowScroller } from 'react-virtualized';
-import { PAGE_ID } from 'widgets/Page/Page';
+import { Virtuoso } from 'react-virtuoso';
+import { Loader } from 'shared/ui/Loader/Loader';
+import { HStack } from 'shared/ui/Stack';
+import { ArticleListItem } from '../../ui/ArticleListItem/ArticleListItem';
 import { Article, ArticleView } from '../../model/types/article';
-import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 
@@ -24,7 +27,7 @@ const getSkeletons = (view:ArticleView) => new Array(view === ArticleView.SMALL 
         <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
     ));
 
-export const ArticleList = memo((props: ArticleListProps) => {
+export const ArticleList = (props: ArticleListProps) => {
     const {
         articles,
         view = ArticleView.SMALL,
@@ -39,89 +42,122 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const itemsPerRow = isBig ? 1 : 3;
     const rowCount = isBig ? 1 : Math.ceil(articles.length / itemsPerRow);
 
-    const rowRenderer = ({
-        index, isScrolling, key, style,
-    }: ListRowProps) => {
-        const items = [];
-        const fromIndex = index * itemsPerRow;
-        const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
-        for (let i = fromIndex; i < toIndex; i += 1) {
-            items.push(
-                <ArticleListItem
-                    article={articles[index]}
-                    view={view}
-                    className={cls.card}
-                    target={target}
-                    key={`str${i}`}
-                />,
-            );
-        }
-        return (
-            <div
-                key={key}
-                className={cls.row}
-                style={style}
-            >
-                {items}
-            </div>
-        );
-    };
+    // const rowRenderer = ({
+    //     index, isScrolling, key, style,
+    // }: ListRowProps) => {
+    //     const items = [];
+    //     const fromIndex = index * itemsPerRow;
+    //     const toIndex = Math.min(fromIndex + itemsPerRow, articles.length);
+    //     for (let i = fromIndex; i < toIndex; i += 1) {
+    //         items.push(
+    //             <ArticleListItem
+    //                 article={articles[index]}
+    //                 view={view}
+    //                 className={cls.card}
+    //                 target={target}
+    //                 key={`str${i}`}
+    //             />,
+    //         );
+    //     }
+    //     return (
+    //         <div
+    //             key={key}
+    //             className={cls.row}
+    //             style={style}
+    //         >
+    //             {items}
+    //         </div>
+    //     );
+    // };
 
     if (isLoading && !articles.length) {
         return (
             <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                <Text size={TextSize.L} title={t('Статьи не найдены')} />
+                <Text size={TextSize.L} title={`${t('Статьи не найдены')}`} />
             </div>
         );
     }
 
+    // return (
+    // <WindowScroller
+    //     scrollElement={document.getElementById(PAGE_ID) as Element}
+    // >
+    //     {(
+    //         {
+    //             height,
+    //             width,
+    //             registerChild,
+    //             isScrolling,
+    //             scrollTop,
+    //             onChildScroll,
+    //         },
+    //     ) => (
+    //         <div
+    //             ref={registerChild}
+    //             className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+    //         >
+    //             {virtualized
+    //                 ? (
+    //                     <List
+    //                         height={height ?? 700}
+    //                         rowCount={rowCount}
+    //                         rowHeight={isBig ? 700 : 330}
+    //                         rowRenderer={rowRenderer}
+    //                         width={width ? width - 80 : 700}
+    //                         autoHeight
+    //                         onScroll={onChildScroll}
+    //                         isScrolling={isScrolling}
+    //                         scrollTop={scrollTop}
+    //                     />
+    //                 )
+    //                 : (
+    //                     articles.map((item) => (
+    //                         <ArticleListItem
+    //                             article={item}
+    //                             view={view}
+    //                             target={target}
+    //                             key={item.id}
+    //                             className={cls.card}
+    //                         />
+    //                     ))
+    //                 )}
+    //
+    //             {isLoading && getSkeletons(view)}
+    //         </div>
+    //     )}
+    // </WindowScroller>
+
     return (
-        <WindowScroller
-            scrollElement={document.getElementById(PAGE_ID) as Element}
-        >
-            {(
-                {
-                    height,
-                    width,
-                    registerChild,
-                    isScrolling,
-                    scrollTop,
-                    onChildScroll,
-                },
-            ) => (
-                <div
-                    ref={registerChild}
-                    className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-                >
-                    {virtualized
-                        ? (
-                            <List
-                                height={height ?? 700}
-                                rowCount={rowCount}
-                                rowHeight={isBig ? 700 : 330}
-                                rowRenderer={rowRenderer}
-                                width={width ? width - 80 : 700}
-                                autoHeight
-                                onScroll={onChildScroll}
-                                isScrolling={isScrolling}
-                                scrollTop={scrollTop}
-                            />
-                        )
-                        : (
-                            articles.map((item) => (
+        <HStack gap="8" max>
+            { virtualized
+                ? (
+                    <Virtuoso
+                        // style={{ height: isBig ? 700 : 330, width: isBig ? 700 : 330 }}
+                        useWindowScroll
+                        data={articles}
+                        // overscan={200}
+                        itemContent={(index, article: Article) => {
+                            return (
                                 <ArticleListItem
-                                    article={item}
+                                    article={article}
                                     view={view}
                                     target={target}
-                                    key={item.id}
                                     className={cls.card}
+                                    key={index}
                                 />
-                            ))
-                        )}
-
-                    {isLoading && getSkeletons(view)}
-                </div>
-            )}
-        </WindowScroller>
+                            );
+                        }}
+                    />
+                ) : (articles.map((item) => (
+                    <ArticleListItem
+                        article={item}
+                        view={view}
+                        target={target}
+                        key={item.id}
+                        className={cls.card}
+                    />
+                )))}
+            {isLoading && getSkeletons(view)}
+        </HStack>
     );
-});
+};

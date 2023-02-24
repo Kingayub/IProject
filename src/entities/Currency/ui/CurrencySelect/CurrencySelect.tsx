@@ -30,11 +30,11 @@ export const CurrencySelect = memo(({
             onChange={onChangeHandler}
             value={value}
             items={options}
-            defaultValue={t('Укажите вылюту')}
+            defaultValue={t('Укажите вылюту')!}
             className={classNames('', {}, [className])}
             readonly={readonly}
             direction="top right"
-            label={t('Укажите вылюту')}
+            label={t('Укажите вылюту')!}
         />
     );
 });

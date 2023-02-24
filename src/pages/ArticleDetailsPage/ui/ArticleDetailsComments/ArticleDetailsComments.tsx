@@ -4,9 +4,10 @@ import { Text, TextSize } from 'shared/ui/Text/Text';
 import { AddCommentForm } from 'features/addCommentForm';
 import { CommentList } from 'entities/Comment';
 import { useDispatch, useSelector } from 'react-redux';
-import { useCallback } from 'react';
+import { Suspense, useCallback } from 'react';
 import { useInitialEffect } from 'shared/lib/hooks/useInnitialEffect/useInitialEffect';
 import { VStack } from 'shared/ui/Stack';
+import { Loader } from 'shared/ui/Loader/Loader';
 import {
     fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
@@ -16,7 +17,7 @@ import { addCommentForArticle } from '../../model/services/addCommentForArticle/
 
 interface ArticleDetailsCommentsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 export const ArticleDetailsComments = ({ className, id }: ArticleDetailsCommentsProps) => {
@@ -24,7 +25,7 @@ export const ArticleDetailsComments = ({ className, id }: ArticleDetailsComments
     const dispatch = useDispatch();
     const comments = useSelector(getArticleComments.selectAll);
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
-    const onSendComment = useCallback((text) => {
+    const onSendComment = useCallback((text:string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
 
@@ -36,9 +37,11 @@ export const ArticleDetailsComments = ({ className, id }: ArticleDetailsComments
         <VStack gap="16" max className={classNames('', {}, [className])}>
             <Text
                 size={TextSize.L}
-                title={t('Комментарии')}
+                title={`${t('Комментарии')}`}
             />
-            <AddCommentForm onSendComment={onSendComment} />
+            <Suspense fallback={<Loader />}>
+                <AddCommentForm onSendComment={onSendComment} />
+            </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}
                 comments={comments}

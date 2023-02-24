@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { themeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import AboutPage from './AboutPage';
 
 export default {
@@ -14,12 +15,14 @@ export default {
     args: {
         to: '/',
     },
+    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof AboutPage>;
 
 const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [themeDecorator(Theme.LIGHT)];
 
 export const Dark = Template.bind({});
 Dark.args = {};

@@ -47,7 +47,9 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['as', 'role', 'data-testid', 'to', 'target', 'align', 'direction', 'justify', 'gap'],
+                ignoreAttribute: ['layout', 'as', 'role',
+                    'data-testid', 'to', 'target', 'align',
+                    'direction', 'justify', 'gap'],
             },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
@@ -61,6 +63,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'king-ayub-plugin-new/relative-absolute-paths': 'error',
+        'react/no-unstable-nested-components': 'off',
     },
     globals: {
         __IS_DEV__: true,

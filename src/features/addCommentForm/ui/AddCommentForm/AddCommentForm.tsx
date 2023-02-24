@@ -40,7 +40,7 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
             <HStack max justify="between" className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     className={cls.input}
-                    placeholder={t('Введите текст комментария')}
+                    placeholder={`${t('Введите текст комментария')}`}
                     value={text}
                     onChange={onCommentTextChange}
                 />

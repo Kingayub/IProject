@@ -22,7 +22,7 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
         <VStack gap="8" max className={classNames('', {}, [className])}>
             <Text
                 size={TextSize.L}
-                title={t('Рекомендуем')}
+                title={`${t('Рекомендуем')}`}
             />
             <ArticleList
                 articles={articles}

@@ -39,7 +39,7 @@ export const CommentList = (props: CommentListProps) => {
                         isLoading={isLoading}
                     />
                 ))
-                : <Text text={t('Комментарии отсутствуют')} />}
+                : <Text text={`${t('Комментарии отсутствуют')}`} />}
         </VStack>
     );
 };

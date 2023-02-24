@@ -81,7 +81,7 @@ export const ArticlePageFilters = ({ className }: ArticlePageFiltersProps) => {
             </div>
             <Card className={cls.search}>
                 <Input
-                    placeholder={t('Поиск')}
+                    placeholder={`${t('Поиск')}`}
                     value={search}
                     onChange={onChangeSearch}
                 />
