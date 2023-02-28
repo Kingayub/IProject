@@ -3,7 +3,6 @@ import { VStack } from '@/shared/ui/Stack';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 import { useNotifications } from '../../api/notificationApi';
-import cls from './NotificationList.module.scss';
 
 interface NotificationListProps {
     className?: string;
@@ -18,7 +17,7 @@ export const NotificationList = ({ className }: NotificationListProps) => {
             <VStack
                 gap="16"
                 max
-                className={classNames(cls.NotificationList, {}, [className])}
+                className={classNames('', {}, [className])}
             >
                 <Skeleton width="100%" border="8px" height="80px" />
                 <Skeleton width="100%" border="8px" height="80px" />
@@ -31,7 +30,7 @@ export const NotificationList = ({ className }: NotificationListProps) => {
         <VStack
             gap="16"
             max
-            className={classNames(cls.NotificationList, {}, [className])}
+            className={classNames('', {}, [className])}
         >
             {data?.map((item) => (
                 <NotificationItem
