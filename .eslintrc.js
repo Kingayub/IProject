@@ -22,7 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
-        'king-ayub-plugin-new',
+        'king-ayub-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -62,7 +62,7 @@ module.exports = {
         'react/jsx-no-useless-fragment': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
-        'king-ayub-plugin-new/relative-absolute-paths': 'error',
+        'king-ayub-plugin/absolute-relative-path-checker': ['error', { alias: '@' }],
         'react/no-unstable-nested-components': 'off',
     },
     globals: {
