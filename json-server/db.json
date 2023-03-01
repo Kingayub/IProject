@@ -623,6 +623,12 @@
       "userId": "1",
       "text": "asdasd",
       "id": "xgopn2a"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "text": "Ayub do it does matter wtf",
+      "id": "w9iJ68F"
     }
   ],
   "users": [
@@ -676,6 +682,87 @@
       "city": "Moscow",
       "username": "Deni",
       "avatar": "https://avatars.dzeninfra.ru/get-zen_doc/3517023/pub_603580012dc5795636076dd1_603582442dc579563608f109/scale_1200"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "отстой",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "",
+      "id": "nEFcuRq"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "rate": 5,
+      "feedback": "",
+      "id": "u4I05NI"
+    },
+    {
+      "articleId": "13",
+      "userId": "1",
+      "rate": 3,
+      "feedback": "ASdasdafhbjdhfbad",
+      "id": "u4-2NsS"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
