@@ -3,13 +3,10 @@ import {
 } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import path from 'path';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { UIActions } from '@/features/UI/model/slices/UISlice';
-import { getUIScroll } from '@/features/UI';
-import { getUIScrollByPath } from '@/features/UI/model/selectors/ui';
+import { getUIScrollByPath, UIActions } from '@/features/UI';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useInitialEffect } from '@/shared/lib/hooks/useInnitialEffect/useInitialEffect';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';

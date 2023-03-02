@@ -63,6 +63,13 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'king-ayub-plugin/absolute-relative-path-checker': ['error', { alias: '@' }],
+        'king-ayub-plugin/imports-from-public-api': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
         'react/no-unstable-nested-components': 'off',
     },
     globals: {

@@ -1,9 +1,6 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Page } from '@/widgets/Page/Page';
-import { HStack } from '@/shared/ui/Stack';
-import { ListBox } from '@/shared/ui/Popups/ui/ListBox/ListBox';
-import { StarRating } from '@/shared/ui/StarRating/StarRating';
+import { Page } from '@/widgets/Page';
 import { RaitingCard } from '@/entities/Raiting';
 
 const MainPage = memo(() => {
