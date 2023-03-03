@@ -14,6 +14,14 @@ export const parameters = {
         },
     },
     layout: 'fullscreen',
+    themes: {
+        default: 'light',
+        list: [
+            { name: 'light', class: Theme.LIGHT, color: '#0449e0' },
+            { name: 'dark', class: Theme.DARK, color: '#090949' },
+            { name: 'violet', class: Theme.VIOLET, color: '#e7d27f' },
+        ],
+    },
 };
 
 addDecorator(StyleDecorator);
