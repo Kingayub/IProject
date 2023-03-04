@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Select, SelectOption } from '@/shared/ui/Select';
 import { SortOrder } from '@/shared/types';
 import cls from './ArticleSortSelector.module.scss';
-import { ArticleSortField } from '../../model/consts/articleConsts';
+import { ArticleSortField } from '@/entities/Article';
 
 interface ArticleSortSelectorProps {
     className?: string;
@@ -14,7 +14,7 @@ interface ArticleSortSelectorProps {
     onChangeSort:(newSort:ArticleSortField)=>void;
 }
 
-export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
+export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     const {
         onChangeSort, onChangeOrder, sort, order, className,
     } = props;
@@ -63,4 +63,4 @@ export const ArticleSortSelector = (props: ArticleSortSelectorProps) => {
             />
         </div>
     );
-};
+});
