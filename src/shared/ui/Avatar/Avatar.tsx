@@ -2,25 +2,39 @@ import { useTranslation } from 'react-i18next';
 import { CSSProperties, useMemo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
+import { AppImage } from '../AppImage';
+import UserIcon from '../../assets/icons/userDefault.svg';
+import { Icon } from '../Icon';
+import { Skeleton } from '../Skeleton';
 
 interface AvatarProps {
     className?: string;
     src?: string;
     size?: number;
     alt?:string;
+    fallbackInverted?: boolean;
 }
 
 export const Avatar = ({
-    className, src, size, alt,
+    className,
+    src,
+    size = 100,
+    alt,
+    fallbackInverted,
 }:AvatarProps) => {
     const { t } = useTranslation();
     const mods:Mods = {};
     const styles = useMemo<CSSProperties>(() => ({
-        height: size || 100,
-        width: size || 100,
+        height: size,
+        width: size,
     }), [size]);
+    const errorFallback = <Icon inverted={fallbackInverted} width={size} height={size} Svg={UserIcon} />;
+    const fallback = <Skeleton width={size} height={size} border="50%" />;
+
     return (
-        <img
+        <AppImage
+            errorFallback={errorFallback}
+            fallback={fallback}
             style={styles}
             src={src}
             alt={alt}
