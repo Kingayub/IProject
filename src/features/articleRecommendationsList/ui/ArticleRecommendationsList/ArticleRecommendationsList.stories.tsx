@@ -47,7 +47,5 @@ export default {
 const Template: ComponentStory<typeof ArticleRecommendationsList> = (args) => <ArticleRecommendationsList {...args} />;
 
 export const Normal = Template.bind({});
-Normal.args = {
-
-};
+Normal.args = {};
 Normal.decorators = [StoreDecorator({})];

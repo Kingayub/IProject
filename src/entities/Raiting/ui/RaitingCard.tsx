@@ -82,7 +82,6 @@ export const RaitingCard = (props: RaitingCardProps) => {
                             </Button>
                         </HStack>
                     </VStack>
-
                 </Modal>
             </BrowserView>
             <MobileView>
