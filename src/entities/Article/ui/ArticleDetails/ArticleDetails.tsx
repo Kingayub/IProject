@@ -110,7 +110,11 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                         className={cls.avatar}
                     />
                 </HStack>
-                <VStack gap="4">
+                <VStack
+                    data-testid="ArticleDetails.Info"
+                    gap="4"
+                    max
+                >
                     <Text
                         className={cls.title}
                         title={article?.title}

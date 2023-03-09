@@ -1,0 +1,15 @@
+import { Comment } from '../../../src/entities/Comment';
+
+export const setRate = (starsCount = 4, feedback = 'feedback') => {
+    cy.getByTestId(`StarRating.${starsCount}`).click();
+    cy.getByTestId('RatingCard.Input').type(feedback);
+    cy.getByTestId('RatingCard.Send').click();
+};
+
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            setRate(starsCount:number, feedback: string): Chainable<Comment>;
+        }
+    }
+}

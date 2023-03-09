@@ -130,6 +130,7 @@ export const ArticleList = (props: ArticleListProps) => {
             { virtualized
                 ? (
                     <Virtuoso
+                        data-testid="ArticleList"
                         // style={{ height: isBig ? 700 : 330, width: isBig ? 700 : 330 }}
                         useWindowScroll
                         data={articles}
@@ -146,15 +147,26 @@ export const ArticleList = (props: ArticleListProps) => {
                             );
                         }}
                     />
-                ) : (articles.map((item) => (
-                    <ArticleListItem
-                        article={item}
-                        view={view}
-                        target={target}
-                        key={item.id}
-                        className={cls.card}
-                    />
-                )))}
+                )
+
+                : (
+                    <div
+                        data-testid="ArticleList"
+                        className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+                    >
+                        {
+                            (articles.map((item) => (
+                                <ArticleListItem
+                                    article={item}
+                                    view={view}
+                                    target={target}
+                                    key={item.id}
+                                    className={cls.card}
+                                />
+                            )))
+                        }
+                    </div>
+                )}
             {isLoading && getSkeletons(view)}
         </HStack>
     );
