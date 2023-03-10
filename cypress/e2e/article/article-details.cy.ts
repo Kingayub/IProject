@@ -34,6 +34,7 @@ describe('Пользователь заходит на страницу стат
     });
 
     it('И ставит оценку', () => {
+        cy.intercept('GET', '**/article/*', { fixture: 'article-details.json' });
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('RatingCard').scrollIntoView();
         cy.setRate(4, 'feedback');
