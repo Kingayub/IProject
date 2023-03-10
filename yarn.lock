@@ -7388,10 +7388,10 @@
     "language-tags" "^1.0.5"
     "minimatch" "^3.0.4"
 
-"eslint-plugin-king-ayub-plugin@^0.0.9":
-  "integrity" "sha512-ccPCAvtV2xGzDN18QHZlYyeOdbJtVAIqOWsH4Z+hVgR2FRZxJxpEhQQ2YNORvnV82FjCHIGLcbo57Sli8v6SSQ=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-king-ayub-plugin/-/eslint-plugin-king-ayub-plugin-0.0.9.tgz"
-  "version" "0.0.9"
+"eslint-plugin-king-ayub-plugin@^0.0.10":
+  "integrity" "sha512-EJvRIYEXIPW5EXuwnecT5LASZqOul0I1hJS8UgvqTleeaC7wV/rxBnQAV8qYFgG5YtHBARaEF6CVKIq45fw8bA=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-king-ayub-plugin/-/eslint-plugin-king-ayub-plugin-0.0.10.tgz"
+  "version" "0.0.10"
   dependencies:
     "micromatch" "^4.0.5"
     "requireindex" "^1.2.0"
